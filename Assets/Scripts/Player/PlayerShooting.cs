@@ -5,6 +5,7 @@ public class PlayerShooting : MonoBehaviour
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
     public float range = 100f;
+    public SteamVR_TrackedObject trackedObj;
 
 
     float timer;
@@ -43,6 +44,15 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        var device = SteamVR_Controller.Input((int)trackedObj.index);
+        if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
+        {
+            Debug.Log("PlayerShooting.FixedUpdate > TRIGGERED");
+            Shoot();
+        }
+    }
 
     public void DisableEffects ()
     {
