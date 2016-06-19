@@ -47,8 +47,8 @@ public class PlayerShooting : MonoBehaviour
     void FixedUpdate()
     {
         var device = SteamVR_Controller.Input((int)trackedObj.index);
-        //if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
-        if (device.GetTouch(SteamVR_Controller.ButtonMask.Trigger))
+        if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
+        //if (device.GetTouch(SteamVR_Controller.ButtonMask.Trigger))
         {
             Debug.Log("PlayerShooting.FixedUpdate > TRIGGERED");
             Shoot();

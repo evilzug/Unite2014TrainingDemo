@@ -383,7 +383,7 @@ MonoBehaviour:
   _head: {fileID: 408470}
   _ears: {fileID: 439042}
   wireframe: 0
-  render: {fileID: 0}
+  flip: {fileID: 0}
 --- !u!114 &11416958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a86c1078ce4314b9c4224560e031b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vrcam: {fileID: 0}
 --- !u!114 &11463128
 MonoBehaviour:
   m_ObjectHideFlags: 1
